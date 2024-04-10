@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div className="relative bg-[url('/images/bg.png')] h-[1073px] bg-no-repeat bg-cover">
-        <Header />
+        <Header center />
         <div className="h-full flex items-center pl-[14.01041666666667%]">
           <h1 className="text-[72px] font-bold text-white">
             IT сопровождение для <br /> бизнеса от Уфанет

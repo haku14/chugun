@@ -12,14 +12,20 @@ export const Footer = () => {
           информационной системы.
         </p>
         <div>
-          <p className="font-bold">CONTACT US</p>
-          <a href="#!" className="flex items-center mt-3 gap-2.5 opacity-60">
+          <p className="font-bold">КОНТАКТЫ</p>
+          <a
+            href="tel:09388"
+            className="flex items-center mt-3 gap-2.5 opacity-60"
+          >
             <Image src={"/icons/phone.svg"} alt="qw" width={16} height={16} />
             <p>09388</p>
           </a>
-          <a href="#!" className="flex items-center mt-2 gap-2.5 opacity-60">
+          <a
+            href="mailto:шынгыс@mail.ru "
+            className="flex items-center mt-2 gap-2.5 opacity-60"
+          >
             <Image src={"/icons/mail.svg"} alt="qw" width={16} height={16} />
-            <p>шынгыс.рф</p>
+            <p>шынгыс@mail.ru</p>
           </a>
         </div>
         <div
@@ -31,7 +37,7 @@ export const Footer = () => {
             })
           }
         >
-          <p>GO TO TOP</p>
+          <p>Наверх</p>
           <Image
             src={"/icons/arrow.svg"}
             alt="arrow icon"
