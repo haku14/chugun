@@ -1,8 +1,13 @@
+"use client";
+
 import { Footer } from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
+import { Dispatch, SetStateAction, useState } from "react";
 
 export default function Price() {
+  const [modal, setModal] = useState(false);
+  const [price, setPrice] = useState(0);
   return (
     <>
       <div className="relative bg-[url('/images/bg3.png')] h-[653px] bg-no-repeat bg-cover">
@@ -15,163 +20,40 @@ export default function Price() {
         <h1 className="text-[60px] font-bold text-white pt-[100px] text-center">
           Тарифы на ежемесячное обслуживание
         </h1>
+        <div className="flex flex-col items-center w-full mt-[110px] gap-[17px]">
+          <div className="flex items-center gap-3">
+            <Image
+              src={"/icons/phone2.svg"}
+              alt="phone"
+              width={40}
+              height={40}
+            />
+            <p className="text-white text-lg">90388</p>
+          </div>
+          <button
+            onClick={() => setModal(true)}
+            className="bg-[#7772F1] px-10 py-2 rounded-[4px] w-fit text-white"
+          >
+            Оставить заявку
+          </button>
+        </div>
       </div>
       <div className="max-w-[1550px] w-full mx-auto mt-10 grid grid-cols-4 gap-10">
-        <div className="border border-gray-400 p-[25px] h-[400px]">
-          <p className="font-bold text-3xl mb-[25px]">Персональный компьютер</p>
-          <div className="flex gap-2 items-center">
-            <Image
-              src={
-                "https://www.ufanet.ru/media/uploads/2023/07/27/icon-pc-01.svg"
-              }
-              alt="qw"
-              width={20}
-              height={20}
-            />
-            <div>
-              <p className="font-bold">1 компьютер</p>
-              <p className="text-[12px]">ежемесячное обслуживание</p>
-            </div>
-          </div>
-          <p className="text-3xl font-bold mt-5">800 ₽/мес</p>
-        </div>
-        <div className="border border-gray-400 p-[25px]">
-          <p className="font-bold text-3xl mb-[25px]">Сервер</p>
-          <div className="flex gap-2 items-center">
-            <Image
-              src={
-                "https://www.ufanet.ru/media/uploads/2023/07/27/icon-server-01.svg"
-              }
-              alt="qw"
-              width={20}
-              height={20}
-            />
-            <div>
-              <p className="font-bold">1 сервер</p>
-              <p className="text-[12px]">ежемесячное обслуживание</p>
-            </div>
-          </div>
-          <p className="text-3xl font-bold mt-5">4 000 ₽/мес</p>
-        </div>
-        <div className="border border-gray-400 p-[25px]">
-          <p className="font-bold text-3xl mb-[25px]">Виртуальный сервер</p>
-          <div className="flex gap-2 items-center">
-            <Image
-              src={
-                "https://www.ufanet.ru/media/uploads/2023/07/27/icon-pc-01.svg"
-              }
-              alt="qw"
-              width={20}
-              height={20}
-            />
-            <div>
-              <p className="font-bold">1 виртуальный сервер</p>
-              <p className="text-[12px]">ежемесячное обслуживание</p>
-            </div>
-          </div>
-          <p className="text-3xl font-bold mt-5">3 000 ₽/мес</p>
-        </div>
-        <div className="border border-gray-400 p-[25px]">
-          <p className="font-bold text-3xl mb-[25px]">Локальная сеть</p>
-          <div className="flex gap-2 items-center">
-            <Image
-              src={
-                "https://www.ufanet.ru/media/uploads/2023/07/27/icon-network-01.svg"
-              }
-              alt="qw"
-              width={20}
-              height={20}
-            />
-            <div>
-              <p className="font-bold">1 сетевое оборудование</p>
-              <p className="text-[12px]">ежемесячное обслуживание</p>
-            </div>
-          </div>
-          <p className="text-3xl font-bold mt-5">1 500 ₽/мес</p>
-        </div>
-        <div className="border border-gray-400 p-[25px]">
-          <p className="font-bold text-3xl mb-[25px]">Сетевое хранилище</p>
-          <div className="flex gap-2 items-center">
-            <Image
-              src={
-                "https://www.ufanet.ru/media/uploads/2023/07/27/icon-network-01.svg"
-              }
-              alt="qw"
-              width={20}
-              height={20}
-            />
-            <div>
-              <p className="font-bold">1 сетевое хранилище</p>
-              <p className="text-[12px]">ежемесячное обслуживание</p>
-            </div>
-          </div>
-          <p className="text-3xl font-bold mt-5">3 000 ₽/мес</p>
-        </div>
-        <div className="border border-gray-400 p-[25px]">
-          <p className="font-bold text-3xl mb-[25px]">АТС</p>
-          <div className="flex gap-2 items-center">
-            <Image
-              src={
-                "https://www.ufanet.ru/media/uploads/2023/07/27/icon-ats-01.svg"
-              }
-              alt="qw"
-              width={20}
-              height={20}
-            />
-            <div>
-              <p className="font-bold">1 телефонная станция</p>
-              <p className="text-[12px]">ежемесячное обслуживание</p>
-            </div>
-          </div>
-          <p className="text-3xl font-bold mt-5">4 000 ₽/мес</p>
-        </div>
-        <div className="border border-gray-400 p-[25px]">
-          <p className="font-bold text-3xl mb-[25px]">Видеонаблюдение</p>
-          <div className="flex gap-2 items-center">
-            <Image
-              src={
-                "https://www.ufanet.ru/media/uploads/2021/05/31/camera_icon.svg"
-              }
-              alt="qw"
-              width={20}
-              height={20}
-            />
-            <div>
-              <p className="font-bold">Видеорегистраторы и камеры</p>
-              <p className="text-[12px]">ежемесячное обслуживание</p>
-            </div>
-          </div>
-          <p className="text-3xl font-bold mt-5">3 000 ₽</p>
-          <p className="text-[12px] opacity-60">за 1 видеорегистратор</p>
-          <p className="text-3xl font-bold mt-5">200 ₽</p>
-          <p className="text-[12px] opacity-60">за 1 камеру на высоте до 3 м</p>
-          <p className="text-3xl font-bold mt-5">350 ₽</p>
-          <p className="text-[12px] opacity-60">за 1 камеру на высоте от 3 м</p>
-        </div>
-        <div className="border border-gray-400 p-[25px]">
-          <p className="font-bold text-3xl mb-[25px]">1С: Предприятие</p>
-          <div className="flex gap-2 items-center">
-            <Image
-              src={
-                "https://www.ufanet.ru/media/uploads/2023/07/27/icon-server-01.svg"
-              }
-              alt="qw"
-              width={20}
-              height={20}
-            />
-            <div>
-              <p className="font-bold">1 информационная база</p>
-              <p className="text-[12px]">ежемесячное обслуживание</p>
-            </div>
-          </div>
-          <p className="text-3xl font-bold mt-5">7 000 ₽</p>
-          <p className="text-[12px] opacity-60">до 10 пользователей</p>
-          <p className="text-3xl font-bold mt-5">10 000 ₽</p>
-          <p className="text-[12px] opacity-60">до 20 пользователей</p>
-          <p className="text-3xl font-bold mt-5">12 000 ₽</p>
-          <p className="text-[12px] opacity-60">21 пользователь и более</p>
-        </div>
+        {DATA.map((item, i) => (
+          <Item
+            key={i}
+            title={item.title}
+            desc={item.desc}
+            image={item.image}
+            price={price}
+            setPrice={setPrice}
+            myPrice={item.price}
+          />
+        ))}
       </div>
+      <p className="text-center mt-10 text-2xl font-semibold">
+        Итого: {price}₽/мес
+      </p>
       <h1 className="text-center text-[60px] font-bold mt-[76px]">
         Проектные <br /> работые
       </h1>
@@ -180,7 +62,101 @@ export default function Price() {
         технологий, оптимизация процессов, улучшение безопасности и надежности
         инфраструктуры, а также обучение персонала.
       </p>
-      <Footer />
+      <Footer modal={modal} setModal={setModal} />
     </>
   );
 }
+
+const Item = ({
+  setPrice,
+  title,
+  image,
+  desc,
+  price,
+  myPrice,
+}: {
+  setPrice: Dispatch<SetStateAction<number>>;
+  price: number;
+  title: string;
+  image: string;
+  desc: string;
+  myPrice: number;
+}) => {
+  const [count, setCount] = useState(0);
+  return (
+    <div className="border border-gray-400 p-[25px] h-[400px] flex flex-col justify-between">
+      <p className="font-bold text-3xl mb-[25px]">{title}</p>
+      <div className="flex gap-2 items-center">
+        <Image src={image} alt="qw" width={20} height={20} />
+        <div>
+          <p className="font-bold">{desc}</p>
+          <p className="text-[12px]">ежемесячное обслуживание</p>
+        </div>
+      </div>
+      <p className="text-3xl font-bold mt-5">{myPrice} ₽/мес</p>
+      <div className="flex items-center justify-between">
+        <button
+          onClick={() => {
+            setPrice(price + myPrice);
+            setCount(count + 1);
+          }}
+          className="bg-[#7772F1] px-10 py-2 rounded-[4px] w-fit text-white"
+        >
+          Добавить
+        </button>
+        <p>{count}</p>
+      </div>
+    </div>
+  );
+};
+
+const DATA = [
+  {
+    title: "Персональный компьютер",
+    desc: "1 компьютер",
+    image: "https://www.ufanet.ru/media/uploads/2023/07/27/icon-pc-01.svg",
+    price: 800,
+  },
+  {
+    title: "Сервер",
+    desc: "1 сервер",
+    image: "https://www.ufanet.ru/media/uploads/2023/07/27/icon-server-01.svg",
+    price: 4000,
+  },
+  {
+    title: "Виртуальный сервер",
+    desc: "1 виртуальный сервер",
+    image: "https://www.ufanet.ru/media/uploads/2023/07/27/icon-pc-01.svg",
+    price: 3000,
+  },
+  {
+    title: "Локальная сеть",
+    desc: "1 сетевое оборудование",
+    image: "https://www.ufanet.ru/media/uploads/2023/07/27/icon-network-01.svg",
+    price: 1500,
+  },
+  {
+    title: "Сетевое хранилище",
+    desc: "1 сетевое хранилище",
+    image: "https://www.ufanet.ru/media/uploads/2023/07/27/icon-network-01.svg",
+    price: 3000,
+  },
+  {
+    title: "АТС",
+    desc: "1 телефонная станция",
+    image: "https://www.ufanet.ru/media/uploads/2023/07/27/icon-ats-01.svg",
+    price: 4000,
+  },
+  {
+    title: "Видеонаблюдение",
+    desc: "Видеорегистраторы и камеры",
+    image: "https://www.ufanet.ru/media/uploads/2021/05/31/camera_icon.svg",
+    price: 3000,
+  },
+  {
+    title: "1С: Предприятие",
+    desc: "1 информационная база",
+    image: "https://www.ufanet.ru/media/uploads/2023/07/27/icon-server-01.svg",
+    price: 7000,
+  },
+];

@@ -1,8 +1,12 @@
+"use client";
+
 import { Footer } from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Services() {
+  const [modal, setModal] = useState(false);
   return (
     <>
       <div className="relative bg-[url('/images/bg4.png')] h-[653px] bg-no-repeat bg-cover">
@@ -15,6 +19,23 @@ export default function Services() {
         <h1 className="text-[60px] font-bold text-white pt-[100px] text-center">
           Примеры работ
         </h1>
+        <div className="flex flex-col items-center w-full mt-[110px] gap-[17px]">
+          <div className="flex items-center gap-3">
+            <Image
+              src={"/icons/phone2.svg"}
+              alt="phone"
+              width={40}
+              height={40}
+            />
+            <p className="text-white text-lg">90388</p>
+          </div>
+          <button
+            onClick={() => setModal(true)}
+            className="bg-[#7772F1] px-10 py-2 rounded-[4px] w-fit text-white"
+          >
+            Оставить заявку
+          </button>
+        </div>
       </div>
       <div className="mt-[170px] mx-auto max-w-[1252px] w-full px-4">
         <div className="flex items-center gap-[150px]">
@@ -69,7 +90,7 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer modal={modal} setModal={setModal} />
     </>
   );
 }

@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Header from "../components/Header";
 import { Footer } from "@/components/Footer";
+import { useState } from "react";
 
 export default function Home() {
+  const [modal, setModal] = useState(false);
   return (
     <>
       <div className="relative bg-[url('/images/bg.png')] h-[1073px] bg-no-repeat bg-cover">
@@ -96,7 +100,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer modal={modal} setModal={setModal} />
     </>
   );
 }
