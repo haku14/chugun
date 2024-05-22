@@ -8,6 +8,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="yandex-verification" content="7d1f6d2e81411212" />
+      </head>
       <body>{children}</body>
     </html>
   );
