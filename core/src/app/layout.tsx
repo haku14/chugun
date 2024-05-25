@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="yandex-verification" content="022511a094aaa775" />
+        <meta name="yandex-verification" content="2869067a30568022" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favi.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favi.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favi.png" />
