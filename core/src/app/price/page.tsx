@@ -55,7 +55,7 @@ export default function Price() {
         Итого: {price}₽/мес
       </p>
       <h1 className="text-center text-[60px] font-bold mt-[76px]">
-        Проектные <br /> работые
+        Проектные <br /> работы
       </h1>
       <p className="max-w-[568px] w-full text-center mt-6 mx-auto">
         Выполняем проектную работу любого уровня. Разработка и внедрение новых
