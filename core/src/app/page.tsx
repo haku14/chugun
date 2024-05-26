@@ -9,7 +9,7 @@ export default function Home() {
   const [modal, setModal] = useState(false);
   return (
     <>
-      <div className="relative bg-[url('/images/bg.png')] h-[1073px] bg-no-repeat bg-cover">
+      <div className="relative bg-[url('/images/bg.png')] h-[1073px] bg-no-repeat bg-cover bg-right">
         <Header center />
         <div className="h-full flex items-center pl-[14.01041666666667%]">
           <h1 className="text-[72px] font-bold text-white">
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="h-[862px] mt-[220px] bg-no-repeat bg-cover bg-[url('/images/bg2.png')] relative max-w-[1920px] mx-auto">
+      <div className="h-[862px] mt-[220px] bg-no-repeat bg-cover bg-[url('/images/bg2.png')] bg-center relative max-w-[1920px] mx-auto">
         <div className="absolute top-[185px] left-[328px] max-w-[390px] w-full">
           <p className="text-5xl font-bold">Ежемесячное обслуживание </p>
           <p className="text-base text-[#787A80] mt-2">

@@ -62,7 +62,7 @@ export const Footer = ({
           </p>
           <div className="flex flex-col gap-5 mt-4">
             <input type="text" placeholder="Контактное лицо" />
-            <input type="text" placeholder="Город, улица, номер квартиры" />
+            <input type="text" placeholder="Город, улица, номер дома" />
             <input type="text" placeholder="Номер телефона" />
             <textarea placeholder="Комментарий"></textarea>
             <button
