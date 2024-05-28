@@ -40,7 +40,7 @@ export default function Services() {
       <div className="mt-[170px] mx-auto max-w-[1252px] w-full px-4">
         <div className="flex items-center gap-[150px]">
           <Image
-            src={"/images/img1.png"}
+            src={"/images/img4.jpg"}
             alt="qw"
             width={609}
             height={653}
