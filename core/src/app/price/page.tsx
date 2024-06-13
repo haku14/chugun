@@ -28,7 +28,7 @@ export default function Price() {
               width={40}
               height={40}
             />
-            <p className="text-white text-lg">90388</p>
+            <p className="text-white text-lg">09388</p>
           </div>
           <button
             onClick={() => setModal(true)}
